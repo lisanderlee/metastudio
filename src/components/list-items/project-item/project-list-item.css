@@ -1,0 +1,58 @@
+.project-item{
+    display: flex;
+    border-radius:6px ;
+    align-items: center;
+    height: 80px;
+    width: 300px;
+    cursor: pointer;
+    margin: 0px;
+    padding: 0px;
+    flex-direction: row;
+}
+
+.project-item:hover{
+    background-color:#262639 ;
+}
+
+.project-item:hover > .project-more-options{
+   opacity: 100;
+}
+
+.project-item:active{
+    background-color:#262639 ;
+}
+
+.project-image img{
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+    margin-left: 20px;
+}
+
+.project-name{
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #CDCDDE;
+}
+
+.project-sub-name{
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 20px;   
+    color: #4C4C66;
+}
+
+.project-component-text{
+    vertical-align: baseline;
+}
+
+.project-more-options{
+    display: flex;
+    margin-left: 60px;
+    opacity: 0;
+}

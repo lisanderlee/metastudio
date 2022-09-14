@@ -1,0 +1,7 @@
+.container-toggle-line{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 0px;
+}
+
