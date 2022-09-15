@@ -1,0 +1,11 @@
+.container-comment-input-panel {
+    background-color: #313042;
+    width: 600px;
+    min-width: 400px;
+    height: 146px;
+    border-radius: 6px;
+    z-index: 100;
+    padding: 20px;
+    display: flex;
+
+}

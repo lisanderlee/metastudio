@@ -1,5 +1,5 @@
 import './project-side-panel.css';
-import SearchInput from '../../components/forms/search-input';
+import SearchInput from '../../components/forms/search-input-field';
 import ProjectListItem from '../../components/list-items/project-item/project-list-item'
 import ProjectNewModal from '../../components/modals/project-new-modal'
 

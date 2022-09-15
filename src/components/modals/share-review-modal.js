@@ -1,4 +1,4 @@
-import ShareReviewTab from "../tabs/share-review-tag";
+import ShareReviewTab from "../tabs/share-review-tab";
 
 // reactstrap components
 import {
