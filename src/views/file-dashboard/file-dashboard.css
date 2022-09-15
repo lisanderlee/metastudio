@@ -1,13 +1,14 @@
-.container-main-dashboard{
+.container-file-dashboard{
     width: 100%;
     height: 100%;
     display: flex;
+    flex-direction: column;
     
 
 }
-
-.container-headers{
-    width: 100%;
+.file-dashboard-bottom{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    height: 100%;
+
 }

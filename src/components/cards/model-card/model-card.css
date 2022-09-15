@@ -1,5 +1,7 @@
 .model-more-options{
-    
+position: relative;
+top: -65px; 
+left: 240px;
 }
 
 button{
@@ -9,5 +11,5 @@ border-color: black;
 padding: 0px;
 color: black;
 background-color: black;
-
 }
+
