@@ -1,6 +1,8 @@
 import './model-card.css';
 import FileOptionsDropdown from '../../dropdowns/file-options-dropdown'
 import StatusSelectorBadges from '../../badges/status-selector-badges/status-selector-badges';
+import CommentCounterBadge from '../../badges/comment-counter-badge/comment-counter-badge';
+
 import {Link} from "react-router-dom"
 
 import {
@@ -30,6 +32,10 @@ export default function ModelCard() {
         <div className='badge-selector'>
         <StatusSelectorBadges showBadge = {"approved"} />
         </div>
+        <div className='comment-counter'>
+        <CommentCounterBadge commentCount ={"4"} />
+        </div>
+       
         <div className='file-more-options'>
         <FileOptionsDropdown />
         </div>
