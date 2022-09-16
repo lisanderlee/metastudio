@@ -1,7 +1,19 @@
-.container-main-dashboard-content {
+.container-file-dashboard-content {
     width: 100%;
     height: 100%;
     background-color: #151521;
     padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
+.file-canvas-buttons-panel{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.file-comment-input-panel{
+    display: flex;
+    justify-content: center;
 }

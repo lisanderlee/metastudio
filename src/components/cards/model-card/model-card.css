@@ -1,9 +1,14 @@
 .file-more-options{
 position: relative;
 top:230px;
-left: -40px;
+left: -110px;
 }
 
+.badge-selector{
+    position: relative;
+    top: 20px;
+    left: -100px;
+}
 .file-card{
    display: flex;
 }

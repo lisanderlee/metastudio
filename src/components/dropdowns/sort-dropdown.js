@@ -11,18 +11,27 @@ export default function SortDropdown() {
     return (
     <>
     <UncontrolledDropdown group>
-      <DropdownToggle caret className="btn-sm ml-3" color="primary">
+      <DropdownToggle caret className="btn-sm ml-3" color="transparent">
           Sort
       </DropdownToggle>
       <DropdownMenu>
       <DropdownItem href="#pablo" onClick={e => e.preventDefault()}>
-        <i class="fa fa-comment" aria-hidden="true"></i>Share for Review
+        Date Uploaded
       </DropdownItem>
       <DropdownItem href="#pablo" onClick={e => e.preventDefault()}>
-        <i class="fa fa-desktop" aria-hidden="true"></i>Share as Presentation
+        Name
       </DropdownItem>
       <DropdownItem href="#pablo" onClick={e => e.preventDefault()}>
-        <i class="fa fa-code" aria-hidden="true"></i>Create IFrame
+        Type
+      </DropdownItem>
+      <DropdownItem href="#pablo" onClick={e => e.preventDefault()}>
+        Size
+      </DropdownItem>
+      <DropdownItem href="#pablo" onClick={e => e.preventDefault()}>
+        Status
+      </DropdownItem>
+      <DropdownItem href="#pablo" onClick={e => e.preventDefault()}>
+        Commmetns
       </DropdownItem>
       </DropdownMenu>
     </UncontrolledDropdown>

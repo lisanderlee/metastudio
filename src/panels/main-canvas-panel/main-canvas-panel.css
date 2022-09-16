@@ -3,5 +3,17 @@
     height: 100%;
     background-color: #151521;
     padding: 30px;
+    display: flex;
+    flex-direction: column;
 
+}
+
+.main-canvas-top-options{
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: flex-end;
+}
+
+.main-canvas-body{
+    display: flex;
 }

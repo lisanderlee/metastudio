@@ -30,7 +30,7 @@ class FileSideBarContentTab extends React.Component {
           <Nav
             className="nav-fill flex-column flex-md-row "
             id="tabs-icons-text"
-            tabs
+            pills
             role="tablist"
             
           >

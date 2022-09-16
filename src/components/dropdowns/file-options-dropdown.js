@@ -3,6 +3,9 @@ import FileCopyToModal from "../modals/file-copyto-modal";
 import FileRenameModal from "../modals/file-rename-modal";
 import FileMoveToModal from "../modals/file-moveto-modal";
 import FileDeleteModal from "../modals/file-delete-modal";
+import ShareReviewModal from "../modals/share-review-modal";
+import SharePresentationModal from "../modals/share-presentation-modal";
+import ShareIframeModal from "../modals/share-iframe-modal";
 // reactstrap components
 import {
   DropdownToggle,
@@ -17,7 +20,9 @@ export default function FileOptionsDropdown() {
   const [openFileMoveToModal, setOpenFileMoveToModal] = useState(false)
   const [openFileCopyToModal, setOpenFileCopyToModal] = useState(false)
   const [openFileDeleteModal, setOpenFileDeleteModal] = useState(false)
-
+  const [openShareReviewModal, setOpenShareReviewModal] = useState(false)
+  const [openSharePresentationToModal, setOpenSharePresentationModal] = useState(false)
+  const [openShareIframeToModal, setOpenShareIframeModal] = useState(false)
   return (
     <>
     <UncontrolledDropdown direction="end" group>
@@ -25,9 +30,15 @@ export default function FileOptionsDropdown() {
         <i class="fa fa-ellipsis-v fa-2x" aria-hidden="true"></i>
         </DropdownToggle>
         <DropdownMenu  className="dropdown-menu-dark" >
-          <DropdownItem href="#pablo" onClick={e => e.preventDefault()}>
-            <i class="fa fa-share" aria-hidden="true"></i>Share
-          </DropdownItem>
+        <DropdownItem href="#pablo" onClick={() => setOpenShareReviewModal(true)}>
+        <i class="fa fa-comment" aria-hidden="true"></i>Share for Review
+        </DropdownItem>
+        <DropdownItem href="#pablo" onClick={() => setOpenSharePresentationModal(true)}>
+        <i class="fa fa-desktop" aria-hidden="true"></i>Share as Presentation
+        </DropdownItem>
+        <DropdownItem href="#pablo" onClick={() => setOpenShareIframeModal(true)}>
+        <i class="fa fa-code" aria-hidden="true"></i>Create IFrame
+        </DropdownItem>
           <DropdownItem href="#pablo" onClick={() => setOpenFileRenameModal(true)}>
             <i class="fa fa-pencil" aria-hidden="true"></i>Rename
           </DropdownItem>
@@ -51,7 +62,10 @@ export default function FileOptionsDropdown() {
           </DropdownItem>
         </DropdownMenu>
     </UncontrolledDropdown>
-      
+    {openShareReviewModal && <ShareReviewModal isModalOpen={setOpenShareReviewModal} />}
+    {openSharePresentationToModal && <SharePresentationModal isModalOpen={setOpenSharePresentationModal} />}
+    {openShareIframeToModal && <ShareIframeModal isModalOpen={setOpenShareIframeModal} />}
+ 
     {openFileRenameModal && <FileRenameModal isModalOpen={setOpenFileRenameModal} />}
     {openFileMoveToModal && <FileMoveToModal isModalOpen={setOpenFileMoveToModal} />}
     {openFileCopyToModal && <FileCopyToModal isModalOpen={setOpenFileCopyToModal} />}

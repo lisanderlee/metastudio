@@ -1,0 +1,4 @@
+.container-file-canvas-buttons-panel{
+    display: flex;
+    flex-direction: column;
+}

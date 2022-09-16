@@ -7,7 +7,7 @@ import {
   Button
 } from "reactstrap";
 
-export default function CommentInputPanel() {
+export default function FileCommentInputPanel() {
     return (
       <>
       <div className='container-comment-input-panel'>

@@ -4,6 +4,8 @@ import MessagesNotificationModal from "../../components/modals/message-notificat
 import MembersNotificationsModal from "../../components/modals/member-notifications-modal"
 import ShareDropdown from "../../components/dropdowns/share-dropdown"
 import ProjectTag from '../../components/tags/project-tag';
+import FileStatusDropdown from '../../components/dropdowns/file-status-dropdown';
+
 import { Button } from "reactstrap";
 import {Link} from "react-router-dom"
 
@@ -20,6 +22,7 @@ export default function FileTopBarPanel() {
             <ProjectTag className="file-top-bar-project-tag" />
         </div>
         <div className='file-top-bar-system'>
+            <FileStatusDropdown />
             <ShareDropdown />
             <MessagesNotificationModal />
             <MembersNotificationsModal />
