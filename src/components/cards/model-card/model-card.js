@@ -1,6 +1,6 @@
 import './model-card.css';
 import FileOptionsDropdown from '../../dropdowns/file-options-dropdown'
-import BadgesSelector from '../../badges/badges-selector/badges-selector';
+import StatusSelectorBadges from '../../badges/status-selector-badges/status-selector-badges';
 import {Link} from "react-router-dom"
 
 import {
@@ -16,7 +16,6 @@ export default function ModelCard() {
       <div className='file-card'>
         <Link to="file-dashboard">
           <Card color='dark' style={{width: '18rem', margin: '0px'}}>
-            
             <img alt="Sample" src="/assets/cone.png"/>
             <CardBody>
               <CardTitle tag="h5">
@@ -29,7 +28,7 @@ export default function ModelCard() {
           </Card> 
         </Link>
         <div className='badge-selector'>
-        <BadgesSelector showBadge = {"needsreview"} />
+        <StatusSelectorBadges showBadge = {"approved"} />
         </div>
         <div className='file-more-options'>
         <FileOptionsDropdown />
