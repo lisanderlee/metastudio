@@ -1,0 +1,9 @@
+.file-information-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.file-information-description{
+    color: white;
+}

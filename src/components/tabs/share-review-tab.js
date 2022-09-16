@@ -2,6 +2,7 @@ import React from "react";
 import classnames from "classnames";
 import ToggleItem from "../forms/toggle-item";
 import DividerTag from "../tags/divider-tag";
+import './tabs.css'
 // reactstrap components
 import {
   Card,
@@ -30,7 +31,7 @@ class ShareReviewTab extends React.Component {
       <>
         <div className="nav-wrapper">
           <Nav
-            className="nav-fill flex-column flex-md-row"
+            className="nav-fill flex-column flex-md-row "
             id="tabs-icons-text"
             pills
             role="tablist"
@@ -66,7 +67,7 @@ class ShareReviewTab extends React.Component {
      
           </Nav>
         </div>
-        <Card className="shadow">
+        <Card className="shadow card-style">
           <CardBody>
             <TabContent activeTab={"tabs" + this.state.tabs}>
               <TabPane tabId="tabs1">

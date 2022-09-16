@@ -1,0 +1,33 @@
+.comment-item{
+    width: 100%;
+    display: flex;
+    flex-direction: column;  
+    background-color:#262639 ; 
+    border-radius: 6px; 
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.comment-information{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.comment-name p{
+    font-weight: 600;
+    font-size: 13px;
+    
+}
+.comment-name{
+    margin-left: 10px;
+
+}
+
+.comment-text p{
+    font-size: 14px;
+}
+
+.comment-text{
+    margin-bottom: 0px;
+}

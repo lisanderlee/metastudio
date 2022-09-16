@@ -1,5 +1,5 @@
-import './file-dashboard-canvas.css';
-import CommentInputPanel from '../comment-input-panel/comment-input-panel';
+import './file-canvas-panel.css';
+import CommentInputPanel from '../file-comment-input-panel/file-comment-input-panel';
 
 
 export default function FileDashboardCanvas() {

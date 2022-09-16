@@ -1,9 +1,9 @@
-import './project-side-panel.css';
+import './main-project-side-panel.css';
 import SearchInput from '../../components/forms/search-input-field';
 import ProjectListItem from '../../components/list-items/project-item/project-list-item'
 import ProjectNewModal from '../../components/modals/project-new-modal'
 
-export default function ProjectsSidePanel() {
+export default function MainProjectsSidePanel() {
     return (
       <>
         <div className='container-side-panel'>

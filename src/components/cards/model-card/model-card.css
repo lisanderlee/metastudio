@@ -1,15 +1,9 @@
-.model-more-options{
+.file-more-options{
 position: relative;
-top: -65px; 
-left: 240px;
+top:230px;
+left: -40px;
 }
 
-button{
-border-width: 0px;
-border-style: none;
-border-color: black;
-padding: 0px;
-color: black;
-background-color: black;
+.file-card{
+   display: flex;
 }
-

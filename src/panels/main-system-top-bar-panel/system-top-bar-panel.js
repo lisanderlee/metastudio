@@ -3,7 +3,7 @@ import UserSettingsDropdown from "../../components/dropdowns/user-settings-dropd
 import MessagesNotificationModal from "../../components/modals/message-notifications-modal" 
 import MembersNotificationsModal from "../../components/modals/member-notifications-modal"
 
-export default function SystenTopBarPanel() {
+export default function SystemTopBarPanel() {
     return (
       <>
       <div className='container-system-top-panel'>

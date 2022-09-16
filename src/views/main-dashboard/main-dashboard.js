@@ -1,18 +1,19 @@
 import './main-dashboard.css';
-import ProjectsSidePanel from "../../panels/project-side-panel/project-side-panel"
-import SystenTopBarPanel from "../../panels/system-top-bar-panel/system-top-bar-panel"
-import ProjectTopBarPanel from "../../panels/project-top-bar-panel/project-top-bar-panel"
-import MainDashboardCanvas from "../../panels/main-dashboard-canvas/main-dashboard-canvas"
+import MainProjectsSidePanel from "../../panels/main-project-side-panel/main-project-side-panel"
+import ProjectTopBarPanel from "../../panels/main-project-top-bar-panel/main-project-top-bar-panel"
+import MainCanvasPanel from "../../panels/main-canvas-panel/main-canvas-panel"
+import MainSystemTopBarPanel  from "../../panels/main-system-top-bar-panel/system-top-bar-panel"
+
 
 export default function MainDashboard() {
     return (
       <>
       <div className='container-main-dashboard'>
-        <ProjectsSidePanel/>
+        <MainProjectsSidePanel/>
         <div className='container-headers'>
-          <SystenTopBarPanel />
+          <MainSystemTopBarPanel />
           <ProjectTopBarPanel />
-          <MainDashboardCanvas />
+          <MainCanvasPanel />
         </div>
       </div>
       </>

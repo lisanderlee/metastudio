@@ -1,6 +1,8 @@
 import React from "react";
 import classnames from "classnames";
-// reactstrap components
+import FileInformationPanel from "../../panels/file-information-panel/file-information-panel";// reactstrap components
+import FileCommentsListPanel from "../../panels/file-comments-list-panel/file-comments-list-panel";
+
 import {
   Card,
   CardBody,
@@ -26,22 +28,24 @@ class FileSideBarContentTab extends React.Component {
       <>
         <div className="nav-wrapper">
           <Nav
-            className="nav-fill flex-column flex-md-row"
+            className="nav-fill flex-column flex-md-row "
             id="tabs-icons-text"
-            pills
+            tabs
             role="tablist"
+            
           >
-            <NavItem>
+            <NavItem >
               <NavLink
                 aria-selected={this.state.tabs === 1}
-                className={classnames("mb-sm-3 mb-md-0", {
+                className={classnames("mb-sm-3 mb-md-0 ", {
                   active: this.state.tabs === 1
                 })}
                 onClick={e => this.toggleNavs(e, "tabs", 1)}
                 href="#pablo"
                 role="tab"
+                
+                
               >
-               
                 Comments
               </NavLink>
             </NavItem>
@@ -60,14 +64,14 @@ class FileSideBarContentTab extends React.Component {
             </NavItem>
           </Nav>
         </div>
-        <Card className="shadow">
-          <CardBody>
+        <Card className="shadow" color="transparent">
+          <CardBody >
             <TabContent activeTab={"tabs" + this.state.tabs}>
               <TabPane tabId="tabs1">
-                comments
+               <FileCommentsListPanel />
               </TabPane>
               <TabPane tabId="tabs2">
-                File Info
+                <FileInformationPanel />
               </TabPane>
             </TabContent>
           </CardBody>

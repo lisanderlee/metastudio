@@ -1,0 +1,4 @@
+.container-file-comments-list-panel{
+    display: flex;
+    flex-direction: column;
+}
