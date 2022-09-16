@@ -1,18 +1,23 @@
 import './file-canvas-panel.css';
-import FileCommentInputPanel from '../file-comment-input-panel/file-comment-input-panel';
+import FileThreeLoaderPanel from '../file-three-canvas-panel/file-three-canvas-panel';
 import FileCanvasButtonsPanel from '../file-canvas-buttons-panel/file-canvas-buttons-panel';
+import FileCommentInputPanel from '../file-comment-input-panel/file-comment-input-panel';
 
 export default function FileDashboardCanvas() {
     return (
       <>
-      <div className='container-file-dashboard-content '>
-        <div className='file-canvas-buttons-panel'>
-          <FileCanvasButtonsPanel />
+   
+      <div className='container-file-canvas-content '>
+      <div className='canvas-right'>
+        <FileThreeLoaderPanel/>
+        <FileCommentInputPanel />
         </div>
-        <div className='file-comment-input-panel'>
-          <FileCommentInputPanel />  
+        <div className='canvas-left'>
+          <FileCanvasButtonsPanel />
         </div>
       </div>
       </>
     )
   }
+
+  

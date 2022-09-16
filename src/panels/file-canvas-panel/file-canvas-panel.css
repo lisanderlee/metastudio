@@ -1,19 +1,26 @@
-.container-file-dashboard-content {
+.container-file-canvas-content {
     width: 100%;
     height: 100%;
     background-color: #151521;
-    padding: 30px;
+    display: flex;
+    flex-direction: row;
+
+   
+}
+
+
+.canvas-right{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    
+  
 }
 
-.file-canvas-buttons-panel{
-    display: flex;
-    justify-content: flex-end;
-}
-
-.file-comment-input-panel{
-    display: flex;
+.canvas-left{
+    margin-right: 20px;
     justify-content: center;
+ 
 }
