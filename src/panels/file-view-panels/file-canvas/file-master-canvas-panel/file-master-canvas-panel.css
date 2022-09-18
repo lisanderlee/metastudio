@@ -1,0 +1,25 @@
+.container-file-canvas-content {
+    width: 100%;
+    height: 100%;
+    background-color: #151521;
+    display: flex;
+    flex-direction: row;
+
+   
+}
+
+
+.canvas-right{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    
+  
+}
+
+.canvas-left{
+    margin-right: 20px;
+    justify-content: center;
+    align-items: center;
+}

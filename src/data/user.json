@@ -1,0 +1,23 @@
+
+[
+    {
+        "id": 1,
+        "avatar": "/user-1.png",
+        "name": "Robert Plant",
+        "email": "robertry@gmail.com"
+    },
+    {
+        "id": 2,
+        "avatar": "/user-2.png",
+        "name": "Mary Johhnson",
+        "email": "mary@gmail.com"
+    },
+    {
+        "id": 3,
+        "avatar": "/user-3.png",
+        "name": "Gloria Gaynor",
+        "email": "gloria@gmail.com"
+    }
+  
+  
+]

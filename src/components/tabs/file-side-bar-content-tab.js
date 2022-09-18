@@ -1,8 +1,7 @@
 import React from "react";
 import classnames from "classnames";
-import FileInformationPanel from "../../panels/file-information-panel/file-information-panel";// reactstrap components
-import FileCommentsListPanel from "../../panels/file-comments-list-panel/file-comments-list-panel";
-
+import FileSideInformationPanel from "../../panels/file-view-panels/file-side-panel/file-side-information-panel/file-side-information-panel"
+import FileSideCommentListPanel from '../../panels/file-view-panels/file-side-panel/file-side-comment-list-panel/file-side-comment-list-panel'
 import {
   Card,
   CardBody,
@@ -68,10 +67,10 @@ class FileSideBarContentTab extends React.Component {
           <CardBody >
             <TabContent activeTab={"tabs" + this.state.tabs}>
               <TabPane tabId="tabs1">
-               <FileCommentsListPanel />
+               <FileSideCommentListPanel />
               </TabPane>
               <TabPane tabId="tabs2">
-                <FileInformationPanel />
+                <FileSideInformationPanel />
               </TabPane>
             </TabContent>
           </CardBody>

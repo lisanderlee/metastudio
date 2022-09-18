@@ -1,0 +1,29 @@
+.container-file-top-panel{
+    width: 100%;
+    height: 65px;
+    background-color: #1E1E2D;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    flex-direction: row;
+    
+}
+
+.file-top-panel-navigation{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.file-top-panel-navigation p{
+    margin-left: 20px;
+}
+
+.file-top-bar-system{
+    display: flex;
+    padding-right: 30px;
+    align-items: center;
+}
+

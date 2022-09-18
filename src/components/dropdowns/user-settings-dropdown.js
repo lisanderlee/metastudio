@@ -14,8 +14,8 @@ export default function UserSettingsDropdown() {
       <>
     <div >
     <UncontrolledDropdown group>
-          <DropdownToggle caret className="btn-sm" color="Transparent">
-          <i class="fa fa-user-circle-o fa-2x" aria-hidden="true"></i>
+          <DropdownToggle  className="btn-sm" color="Transparent">
+          <img src= "/assets/project-image.png" alt=""/>
           </DropdownToggle>
           <DropdownMenu >
             <DropdownItem href="#pablo" onClick={e => e.preventDefault()}>

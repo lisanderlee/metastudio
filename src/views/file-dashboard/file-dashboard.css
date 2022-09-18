@@ -1,14 +1,24 @@
 .container-file-dashboard{
-    width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
-    
+    width: 100%;
+    height: 100%;
 
 }
 .file-dashboard-bottom{
     display: flex;
-    flex-direction: row;
-    height: 100%;
+   
+ 
+}
 
+.panel{
+
+     flex-basis:100px;
+}
+
+
+.file{
+   
+    flex-grow:1;
+    flex-basis:300px;
 }

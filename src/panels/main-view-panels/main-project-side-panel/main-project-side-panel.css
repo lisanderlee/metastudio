@@ -1,0 +1,40 @@
+.container-side-panel {
+    width: 340px;
+    height: 100%;
+    background-color: #1E1E2D ;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.project-search-field{
+    margin-top: 40px;
+    padding-left: 20px;
+    width: 100%;
+}
+
+.project-head{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.project-list-tile h3{
+    font-style: normal;
+    font-weight: 500;
+    line-height: 33px;
+    color: #FFFFFF;
+    padding-left: 20px;
+
+}
+
+.project-list-container{
+    margin-top:20px;
+}
+

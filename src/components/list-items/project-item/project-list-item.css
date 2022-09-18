@@ -22,11 +22,8 @@
     background-color:#262639 ;
 }
 
-.project-image img{
-    width: 40px;
-    height: 40px;
+.project-image{
     margin-right: 15px;
-    margin-left: 20px;
 }
 
 .project-name{

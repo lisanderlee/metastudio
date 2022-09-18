@@ -1,5 +1,6 @@
 import './project-list-item.css';
 import ProjectMoreOptionsDropdown from "../../dropdowns/project-options-dropdown"
+import Avatar from 'react-avatar';
 
 
 export default function ProjectListItem() {
@@ -7,7 +8,7 @@ export default function ProjectListItem() {
       <>
       <div className='project-item'>
             <div className='project-image'>
-                <img src= "/assets/project-image.png" alt=""/>
+            <Avatar name="" size={40} round="6px"/>
             </div>
             <div className='project-component-text'>
                 <div className='project-name'>
