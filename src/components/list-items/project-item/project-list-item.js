@@ -3,19 +3,19 @@ import ProjectMoreOptionsDropdown from "../../dropdowns/project-options-dropdown
 import Avatar from 'react-avatar';
 
 
-export default function ProjectListItem() {
+export default function ProjectListItem({ProjectName, ProjectOwner}) {
     return (
       <>
       <div className='project-item'>
             <div className='project-image'>
-            <Avatar name="" size={40} round="6px"/>
+            <Avatar name={ProjectName} size={40} round="6px"/>
             </div>
             <div className='project-component-text'>
                 <div className='project-name'>
-                    Name of project
+                    {ProjectName}
                 </div>
                 <div className='project-sub-name'>
-                    by Lisandro Ancewicz
+                    {ProjectOwner}
                 </div>
             </div>
             <div className='project-more-options'>

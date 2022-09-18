@@ -7,18 +7,18 @@ import "./assets/vendor/font-awesome/css/font-awesome.min.css";
 import "./assets/scss/argon-design-system-react.scss?v1.1.0";
 import {configureStore} from '@reduxjs/toolkit';
 import {Provider} from 'react-redux';
-import projectReducer from './features/Projects'
+import ProjectReducers from './features/Projects'
 
 const store = configureStore({
   reducer: {
-    projects: projectReducer
+    projects: ProjectReducers,
   }
 })
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Provider store >
+    <Provider store={store} >
     <App />
     </Provider>
   </React.StrictMode>

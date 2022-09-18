@@ -1,7 +1,9 @@
-import React from "react";
+
 import ToggleItem from "../forms/toggle-item";
 import DividerTag from "../tags/divider-tag";
-
+import { addProject } from '../../features/Projects'
+import { useDispatch } from 'react-redux'
+import { useState } from "react";
 // reactstrap components
 import {
   Button,
@@ -10,16 +12,22 @@ import {
  
 } from "reactstrap";
 
-class ProjectNewModal extends React.Component {
-  state = {
-    exampleModal: false
-  };
-  toggleModal = state => {
-    this.setState({
-      [state]: !this.state[state]
-    });
-  };
-  render() {
+export default function ProjectNewModal(){   
+  
+  const dispatch = useDispatch();
+  const [projectName, setProjectName] = useState("");
+  const [openModal, setOpenModal] = useState(false)
+  
+  const toggleModal = () => {
+    setOpenModal(!openModal);
+  }
+
+  const handleClick = event => {
+    dispatch(addProject({id:"2" ,name: projectName , owner:"Lisandro Ancewicz"}));
+    toggleModal();
+ 
+  }
+ 
     return (
       <>
         {/* Button trigger modal */}
@@ -27,7 +35,7 @@ class ProjectNewModal extends React.Component {
           color="dark"
           type="button"
           className="btn-sm ml-3" 
-          onClick={() => this.toggleModal("exampleModal")}
+          onClick={toggleModal}
         >
         <i class="fa fa-plus-square" aria-hidden="true"></i>
 
@@ -35,8 +43,8 @@ class ProjectNewModal extends React.Component {
         {/* Modal */}
         <Modal
           className="modal-dialog-centered"
-          isOpen={this.state.exampleModal}
-          toggle={() => this.toggleModal("exampleModal")}
+          isOpen= {openModal}
+          toggle={toggleModal}
         >
           <div className="modal-header">
             <h5 className="modal-title" id="exampleModalLabel">
@@ -47,13 +55,16 @@ class ProjectNewModal extends React.Component {
               className="close"
               data-dismiss="modal"
               type="button"
-              onClick={() => this.toggleModal("exampleModal")}
+              toggle={toggleModal}
+              onClick={toggleModal}
             >
               <span aria-hidden={true}>×</span>
             </button>
           </div>
           <div className="modal-body">
-          <Input id="projectName" placeholder="Project Name" type="email" className="mb-4"/> 
+          <Input id="projectName" placeholder="Project Name" type="text" className="mb-4" 
+           onChange={(event) => {setProjectName(event.target.value)}}/> 
+
           <ToggleItem text="Anyone on your team can view project" />
           <DividerTag text="Permissions" />
           <ToggleItem text="Anyone can download" />
@@ -68,18 +79,20 @@ class ProjectNewModal extends React.Component {
               color="secondary"
               data-dismiss="modal"
               type="button"
-              onClick={() => this.toggleModal("exampleModal")}
+              onClick={toggleModal}
             >
               Cancel
             </Button>
-            <Button color="primary" type="button">
+            <Button 
+            color="primary" 
+            type="button"
+            onClick={handleClick}>
               Create Project
             </Button>
           </div>
         </Modal>
       </>
     );
-  }
+ 
 }
 
-export default ProjectNewModal;

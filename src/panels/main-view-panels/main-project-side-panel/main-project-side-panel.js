@@ -6,7 +6,7 @@ import {useSelector} from 'react-redux'
 
 export default function MainProjectsSidePanel() {
   const projectsList = useSelector ((state) => state.projects.value)
-  
+
     return (
       <>
         <div className='container-side-panel'>
@@ -21,9 +21,11 @@ export default function MainProjectsSidePanel() {
           </div>
 
         <div className='project-list-container'>
-          <ProjectListItem />
-          <ProjectListItem />
-          <ProjectListItem />
+          {projectsList.map((projects)=>{
+          return <ProjectListItem ProjectName={projects.name} ProjectOwner={projects.owner}/>
+
+          })}
+         
         </div>
       </div>
       </>

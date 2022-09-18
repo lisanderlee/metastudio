@@ -1,6 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-
-import { ProjectsData } from '../data/ProjectsData.json';
+import { ProjectsData } from '../data/projects-data';
 
 
 export const ProjectSlice = createSlice({
@@ -13,4 +12,5 @@ export const ProjectSlice = createSlice({
   },
 });
 
+export const {addProject} = ProjectSlice.actions;
 export default ProjectSlice.reducer;
