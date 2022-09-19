@@ -22,7 +22,7 @@ export default function MainProjectsSidePanel() {
 
         <div className='project-list-container'>
           {projectsList.map((projects)=>{
-          return <ProjectListItem ProjectName={projects.name} ProjectOwner={projects.owner}/>
+          return <ProjectListItem ProjectName={projects.name} ProjectOwner={projects.owner} ProjectId={projects.id}/>
 
           })}
          

@@ -5,38 +5,63 @@
     height: 80px;
     width: 300px;
     cursor: pointer;
-    margin: 0px;
     padding: 0px;
     flex-direction: row;
+    padding: 20px;
+    justify-content: space-between;
+  
 }
 
-.project-item:hover{
+button{
+    background-color: transparent;
+    border: none;
+}
+
+button:hover{
     background-color:#262639 ;
+    border: none;
 }
 
-.project-item:hover > .project-more-options{
+button:hover > .project-more-options{
    opacity: 100;
+   border: none;
 }
 
-.project-item:active{
+button:active{
     background-color:#262639 ;
+    border: none;
+    outline: none;
 }
 
+button::selection{
+    background-color:#262639 ;
+    border: none;
+    outline: none;
+}
+
+button:focus {
+    background-color:#262639 ;
+    
+  }
+
+button:visited{
+    background-color:#262639 ;
+    border: none;
+    outline: none;
+}
+.project-info{
+    display: flex;
+    flex-direction: row;
+}
 .project-image{
     margin-right: 15px;
 }
 
-.project-name{
-
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    color: #CDCDDE;
+.project-component-text .project-name{
+  text-align: left;
 }
 
 .project-sub-name{
-
     font-style: normal;
     font-weight: 500;
     font-size: 13px;
@@ -44,12 +69,10 @@
     color: #4C4C66;
 }
 
-.project-component-text{
-    vertical-align: baseline;
-}
 
 .project-more-options{
     display: flex;
     margin-left: 60px;
     opacity: 0;
+    justify-self: flex-end;
 }

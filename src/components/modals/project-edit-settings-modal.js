@@ -9,7 +9,7 @@ import {
  
 } from "reactstrap";
 
-export default function ProjectEditModal({isModalOpen}) {
+export default function ProjectEditModal({isModalOpen, ProjectId}) {
     return (
       <>
           <Modal

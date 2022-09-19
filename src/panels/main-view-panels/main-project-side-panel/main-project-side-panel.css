@@ -7,6 +7,7 @@
     padding-top: 20px;
     display: flex;
     flex-direction: column;
+    overflow: 'hidden';
 
 }
 
@@ -23,6 +24,7 @@
     align-items: center;
     width: 100%;
     justify-content: space-between;
+    
 }
 
 .project-list-tile h3{
@@ -36,5 +38,33 @@
 
 .project-list-container{
     margin-top:20px;
+    height: 100%;
+    overflow-y:auto;
+    overflow-x: hidden;  
+    margin-bottom: 20px;
+    
+    padding-right: 20px;
 }
 
+/* width */
+::-webkit-scrollbar {
+width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+background: #454550;
+border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: #888;
+border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: #555;
+border-radius: 10px;
+}

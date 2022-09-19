@@ -1,3 +1,7 @@
+import { useState } from "react";
+import {useDispatch} from 'react-redux'
+import { deleteUser } from '../../features/Projects'
+
 // reactstrap components
 import {
   Button,
@@ -6,7 +10,18 @@ import {
  
 } from "reactstrap";
 
-export default function ProjectDeleteModal({isModalOpen}) {
+
+
+export default function ProjectDeleteModal({isModalOpen, ProjectId}) {
+
+  const dispatch = useDispatch();
+  const handleClick = event => {
+    dispatch(deleteUser({ id: ProjectId }));
+    
+  }
+
+
+  
     return (
       <>
           <Modal
@@ -16,7 +31,7 @@ export default function ProjectDeleteModal({isModalOpen}) {
           >
             <div className="modal-header">
               <h5 className="modal-title" id="exampleModalLabel">
-               Delete Project
+               Delete Project {ProjectId}
               </h5>
               <button
                 aria-label="Close"
@@ -42,8 +57,8 @@ export default function ProjectDeleteModal({isModalOpen}) {
               >
                 Cancel
               </Button>
-              <Button color="warning" type="button">
-                Delete Project
+              <Button onClick={handleClick} color="warning" type="button">
+              Delete Project
               </Button>
             </div>
           </Modal>

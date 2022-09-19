@@ -10,7 +10,13 @@ export const ProjectSlice = createSlice({
       state.value.push(action.payload);
     }
   },
+
+  deleteUser: (state, action) => {
+    state.value = state.value.filter((user) => user.id !== action.payload.id);
+  },
+
+
 });
 
-export const {addProject} = ProjectSlice.actions;
+export const {addProject, deleteUser} = ProjectSlice.actions;
 export default ProjectSlice.reducer;

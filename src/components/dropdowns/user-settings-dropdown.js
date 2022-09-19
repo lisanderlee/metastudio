@@ -1,4 +1,5 @@
 import './dropdowns.css';
+import Avatar from 'react-avatar';
 
 import React from "react";
 // reactstrap components
@@ -14,8 +15,8 @@ export default function UserSettingsDropdown() {
       <>
     <div >
     <UncontrolledDropdown group>
-          <DropdownToggle  className="btn-sm" color="Transparent">
-          <img src= "/assets/project-image.png" alt=""/>
+          <DropdownToggle  caret className="btn-sm" color="Transparent">
+          <Avatar src= "/assets/user-3.png"size={32} round="6px"alt=""/>
           </DropdownToggle>
           <DropdownMenu >
             <DropdownItem href="#pablo" onClick={e => e.preventDefault()}>

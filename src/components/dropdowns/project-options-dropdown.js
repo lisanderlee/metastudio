@@ -13,7 +13,7 @@ import {
   UncontrolledDropdown,
 } from "reactstrap";
 
-export default function ProjectOptionsDropdown() {
+export default function ProjectOptionsDropdown({ProjectId}) {
   
   const [openProjecEditSettingsModal, setOpenProjectEditSettingsModal] = useState(false)
   const [openProjectDownloadModal, setOpenProjectDownloadModal] = useState(false) 
@@ -25,7 +25,7 @@ export default function ProjectOptionsDropdown() {
   return (
       <>
       <UncontrolledDropdown direction="end" group>
-        <DropdownToggle  className="btn-sm" color="transparent">
+        <DropdownToggle  className="btn-sm" color="dark">
           <i class="fa fa-ellipsis-v fa-2x" aria-hidden="true"></i>
         </DropdownToggle>
         <DropdownMenu  className="dropdown-menu-dark" >
@@ -45,17 +45,17 @@ export default function ProjectOptionsDropdown() {
           <i class="fa fa-archive" aria-hidden="true"></i>Archive Project
         </DropdownItem>
         <DropdownItem href="#pablo" onClick={() => setOpenProjectDeleteModal(true)}>
-          <i class="fa fa-trash" aria-hidden="true"></i>Delete Project
+          <i class="fa fa-trash" aria-hidden="true"></i>{ProjectId} Delete Project
         </DropdownItem>
         </DropdownMenu>
       </UncontrolledDropdown>
         
-      {openProjecEditSettingsModal && <ProjectEditModal isModalOpen={setOpenProjectEditSettingsModal} />}
-      {openProjectDownloadModal && <ProjectDownloadModal isModalOpen={setOpenProjectDownloadModal} />}
+      {openProjecEditSettingsModal && <ProjectEditModal isModalOpen={setOpenProjectEditSettingsModal} ProjectId={ProjectId}/>}
+      {openProjectDownloadModal && <ProjectDownloadModal isModalOpen={setOpenProjectDownloadModal} ProjectId={ProjectId} />}
       {openProjectRecentlyDeletedModal && <ProjectRecentlyDeletedModal isModalOpen={setOpenProjectRecentlyDeletedModal} />}
-      {openProjectLeaveToModal && <ProjectLeaveModal isModalOpen={setOpenProjectLeaveModal} />}
-      {openProjectArchiveModal && <ProjectArchiveModal isModalOpen={setOpenProjectArchiveModal} />}
-      {openProjectDeleteModal && <ProjectDeleteModal isModalOpen={setOpenProjectDeleteModal} />}    
+      {openProjectLeaveToModal && <ProjectLeaveModal isModalOpen={setOpenProjectLeaveModal} ProjectId={ProjectId}/>}
+      {openProjectArchiveModal && <ProjectArchiveModal isModalOpen={setOpenProjectArchiveModal} ProjectId={ProjectId} />}
+      {openProjectDeleteModal && <ProjectDeleteModal isModalOpen={setOpenProjectDeleteModal} ProjectId={ProjectId}/>}    
       </>
     )
   }

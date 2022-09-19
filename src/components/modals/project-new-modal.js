@@ -2,7 +2,7 @@
 import ToggleItem from "../forms/toggle-item";
 import DividerTag from "../tags/divider-tag";
 import { addProject } from '../../features/Projects'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { useState } from "react";
 // reactstrap components
 import {
@@ -15,7 +15,8 @@ import {
 export default function ProjectNewModal(){   
   
   const dispatch = useDispatch();
-  const [projectName, setProjectName] = useState("");
+  const projectList = useSelector((state) => (state.projects.value));
+  const [projectName, setProjectName] = useState(false);
   const [openModal, setOpenModal] = useState(false)
   
   const toggleModal = () => {
@@ -23,8 +24,9 @@ export default function ProjectNewModal(){
   }
 
   const handleClick = event => {
-    dispatch(addProject({id:"2" ,name: projectName , owner:"Lisandro Ancewicz"}));
+    dispatch(addProject({id: projectList[projectList.length - 1].id + 1 ,name: projectName , owner:"Lisandro Ancewicz"}));
     toggleModal();
+    setProjectName(false)
  
   }
  
@@ -86,7 +88,8 @@ export default function ProjectNewModal(){
             <Button 
             color="primary" 
             type="button"
-            onClick={handleClick}>
+            onClick={handleClick}
+            disabled={!projectName}>
               Create Project
             </Button>
           </div>

@@ -5,7 +5,7 @@ import {
  
 } from "reactstrap";
 
-export default function ProjectArchiveModal({isModalOpen}) {
+export default function ProjectArchiveModal({isModalOpen, ProjectId}) {
     return (
       <>
           <Modal
