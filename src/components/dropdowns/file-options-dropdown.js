@@ -26,7 +26,7 @@ export default function FileOptionsDropdown() {
   return (
     <>
     <UncontrolledDropdown direction="end" group>
-        <DropdownToggle  className="btn-sm" color="transparent">
+        <DropdownToggle  className="btn-sm" color="dark">
         <i class="fa fa-ellipsis-v fa-2x" aria-hidden="true"></i>
         </DropdownToggle>
         <DropdownMenu  className="dropdown-menu-dark" >

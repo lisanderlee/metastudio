@@ -18,10 +18,10 @@ import {
         />
         <div className="d-flex ">
           <div className="ml-auto">
-            <Button color="secondary" size="sm" type="button" className="mt-3 align-items-start">
+            <Button color="transparent" size="sm" type="button" className="mt-3 align-items-start">
               Cancel
             </Button>
-            <Button color="primary" size="sm" type="button"className="mt-3 ">
+            <Button color="dark" size="sm" type="button"className="mt-3 ">
               Save
             </Button>
           </div>

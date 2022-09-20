@@ -19,7 +19,7 @@ export default function FileCommentItem() {
            <p>The cone is looking pretty good. Please fix the color.</p> 
         </div>
         <div className='comment-reply-button'>
-        <Button color="dark" size="sm" type="button">
+        <Button color="transparent" size="sm" type="button">
             Reply
         </Button>
         </div>  

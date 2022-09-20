@@ -15,8 +15,8 @@ export default function UserSettingsDropdown() {
       <>
     <div >
     <UncontrolledDropdown group>
-          <DropdownToggle  caret className="btn-sm" color="Transparent">
-          <Avatar src= "/assets/user-3.png"size={32} round="6px"alt=""/>
+          <DropdownToggle  caret size="sm"color="transparent" >
+          <Avatar src= "/assets/user-3.png"size={28} round="6px"alt=""/>
           </DropdownToggle>
           <DropdownMenu >
             <DropdownItem href="#pablo" onClick={e => e.preventDefault()}>
@@ -28,7 +28,6 @@ export default function UserSettingsDropdown() {
             <DropdownItem href="#pablo" onClick={e => e.preventDefault()}>
             <i class="fa fa-users" aria-hidden="true"></i>Manage Members
             </DropdownItem>
-         
             <DropdownItem href="#pablo" onClick={e => e.preventDefault()}>
             <i class="fa fa-sign-out" aria-hidden="true"></i>Sign Out
             </DropdownItem>

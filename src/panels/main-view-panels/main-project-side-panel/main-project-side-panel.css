@@ -1,21 +1,17 @@
 .container-side-panel {
     width: 340px;
     height: 100%;
-    background-color: #1E1E2D ;
+    background-color: #111723 ;
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 20px;
     display: flex;
     flex-direction: column;
-    overflow: 'hidden';
+
 
 }
 
-.project-search-field{
-    margin-top: 40px;
-    padding-left: 20px;
-    width: 100%;
-}
+
 
 .project-head{
     margin-top: 40px;
@@ -42,7 +38,6 @@
     overflow-y:auto;
     overflow-x: hidden;  
     margin-bottom: 20px;
-    
     padding-right: 20px;
 }
 

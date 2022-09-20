@@ -8,51 +8,31 @@
     padding: 0px;
     flex-direction: row;
     padding: 20px;
-    justify-content: space-between;
-  
+    justify-content: space-between; 
 }
 
-button{
-    background-color: transparent;
-    border: none;
-}
 
-button:hover{
+.project-item:hover{
     background-color:#262639 ;
     border: none;
 }
 
-button:hover > .project-more-options{
+.project-item:hover > .project-more-options{
    opacity: 100;
    border: none;
 }
 
-button:active{
+.project-item:active{
     background-color:#262639 ;
     border: none;
     outline: none;
 }
 
-button::selection{
-    background-color:#262639 ;
-    border: none;
-    outline: none;
-}
-
-button:focus {
-    background-color:#262639 ;
-    
-  }
-
-button:visited{
-    background-color:#262639 ;
-    border: none;
-    outline: none;
-}
 .project-info{
     display: flex;
     flex-direction: row;
 }
+
 .project-image{
     margin-right: 15px;
 }

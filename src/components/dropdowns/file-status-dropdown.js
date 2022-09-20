@@ -16,8 +16,8 @@ import {
 
 
 
-export default function FileStatusDropdown() {
-    const [status, setStatus] = useState(false)
+export default function FileStatusDropdown(FileStatus) {
+    const [status, setStatus] = useState(FileStatus)
 
     return (
     <>

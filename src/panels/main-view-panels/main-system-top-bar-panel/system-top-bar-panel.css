@@ -1,7 +1,8 @@
 .container-system-top-panel{
     width: 100%;
-    height: 65px;
-    background-color: #1E1E2D;
+    height: 50px;
+    min-height: 50px;
+    background-color: #111723;
     display: flex;
     justify-content: flex-end;
     align-items: center;

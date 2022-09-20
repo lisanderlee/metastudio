@@ -20,9 +20,9 @@ class MemberAddModal extends React.Component {
       <>
         {/* Button trigger modal */}
         <Button
-          color="dark"
+          color="secondary"
           type="button"
-          className="btn-sm ml-3" 
+          className="btn-sm" 
           onClick={() => this.toggleModal("exampleModal")}
         >
         <i class="fa fa-user-plus" aria-hidden="true"></i>

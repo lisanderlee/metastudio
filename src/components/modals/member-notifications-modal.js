@@ -22,7 +22,7 @@ class MemberNotificationsModal extends React.Component {
         <Button
           color="dark"
           type="button"
-          className="btn-sm ml-3" 
+          size="sm"
           onClick={() => this.toggleModal("exampleModal")}
         >
        <i class="fa fa-users" aria-hidden="true"></i>

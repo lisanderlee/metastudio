@@ -42,8 +42,6 @@ class FileSideBarContentTab extends React.Component {
                 onClick={e => this.toggleNavs(e, "tabs", 1)}
                 href="#pablo"
                 role="tab"
-                
-                
               >
                 Comments
               </NavLink>
@@ -64,7 +62,7 @@ class FileSideBarContentTab extends React.Component {
           </Nav>
         </div>
         <Card className="shadow" color="transparent">
-          <CardBody >
+          <CardBody className="p-0">
             <TabContent activeTab={"tabs" + this.state.tabs}>
               <TabPane tabId="tabs1">
                <FileSideCommentListPanel />

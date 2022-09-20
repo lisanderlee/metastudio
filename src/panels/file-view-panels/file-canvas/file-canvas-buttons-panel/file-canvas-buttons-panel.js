@@ -32,7 +32,7 @@ export default function FileCanvasButtonsPanel() {
             AR
         </Button>
         <Button color="default" size="sm" type="button"className="mt-3" onClick={() => setOpenFileVrModal(true)}>
-            VR
+            AR
         </Button>
       </div>
 

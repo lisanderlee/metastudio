@@ -6,6 +6,7 @@ import {
   DropdownMenu,
   DropdownItem,
   UncontrolledDropdown,
+  Input
 } from "reactstrap";
 
 export default function NewDropdown() {
@@ -13,13 +14,14 @@ export default function NewDropdown() {
   const [openFolderNewModal, setOpenFolderNewModal] = useState(false);
     
   return(
+    
     <>
     <UncontrolledDropdown group>
-      <DropdownToggle caret className="btn-sm ml-3" color="dark">
+      <DropdownToggle caret className="btn-sm ml-3" color="secondary">
           New
       </DropdownToggle>
       <DropdownMenu color="primary">
-      <DropdownItem href="#pablo" onClick={e => e.preventDefault() }>
+      <DropdownItem href="#pablo" type="file" onClick={e => e.preventDefault() }>
         <i class="fa fa-upload" aria-hidden="true"></i>File Upload
       </DropdownItem>
       <DropdownItem href="#pablo" onClick={e => e.preventDefault()}>

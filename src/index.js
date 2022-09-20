@@ -8,10 +8,12 @@ import "./assets/scss/argon-design-system-react.scss?v1.1.0";
 import {configureStore} from '@reduxjs/toolkit';
 import {Provider} from 'react-redux';
 import ProjectReducers from './features/Projects'
+import FileReducers from './features/Files'
 
 const store = configureStore({
   reducer: {
     projects: ProjectReducers,
+    files: FileReducers
   }
 })
 

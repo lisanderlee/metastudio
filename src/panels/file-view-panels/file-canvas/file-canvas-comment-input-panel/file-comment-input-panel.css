@@ -1,4 +1,5 @@
 .container-comment-input-panel {
+    display: flex;
     background-color: #313042;
     width: 600px;
     min-width: 400px;
@@ -7,5 +8,25 @@
     z-index: 100;
     padding: 20px;
     margin-bottom: 20px;
+    flex-direction: column;
    
+}
+.comment-input-avatar{
+    display: flex;
+    flex-direction: row;
+}
+.comment-button{
+    display: flex;
+    justify-content: flex-end
+  
+}
+
+.avatar-input-field{
+    flex-direction: row;
+}
+
+.avatar-input-field{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }

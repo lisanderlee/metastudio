@@ -21,7 +21,7 @@ class MessageNotificationsModal extends React.Component {
         <Button
           color="dark"
           type="button"
-          className="btn-sm ml-3" 
+          size="sm"
           onClick={() => this.toggleModal("exampleModal")}
         >
        <i class="fa fa-envelope" aria-hidden="true"></i>

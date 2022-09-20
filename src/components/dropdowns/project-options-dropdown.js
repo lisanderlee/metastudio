@@ -24,7 +24,7 @@ export default function ProjectOptionsDropdown({ProjectId}) {
  
   return (
       <>
-      <UncontrolledDropdown direction="end" group>
+      <UncontrolledDropdown direction="end"    className="me-2" group>
         <DropdownToggle  className="btn-sm" color="dark">
           <i class="fa fa-ellipsis-v fa-2x" aria-hidden="true"></i>
         </DropdownToggle>
@@ -45,7 +45,7 @@ export default function ProjectOptionsDropdown({ProjectId}) {
           <i class="fa fa-archive" aria-hidden="true"></i>Archive Project
         </DropdownItem>
         <DropdownItem href="#pablo" onClick={() => setOpenProjectDeleteModal(true)}>
-          <i class="fa fa-trash" aria-hidden="true"></i>{ProjectId} Delete Project
+          <i class="fa fa-trash" aria-hidden="true"></i>Delete Project
         </DropdownItem>
         </DropdownMenu>
       </UncontrolledDropdown>

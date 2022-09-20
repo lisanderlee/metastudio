@@ -12,33 +12,36 @@ import {
   CardSubtitle,
 } from "reactstrap";
 
-export default function ModelCard() {
+export default function ModelCard({FileName, ProjectID, Thumbnail, FileStatus, FileComments, fileId}) {
     return (
     <>
       <div className='file-card'>
-        <Link to="file-dashboard">
-          <Card color='dark' style={{width: '18rem', margin: '0px'}}>
-            <img alt="Sample" src="/assets/cone.png"/>
-            <CardBody>
-              <CardTitle tag="h5">
-                Cone.glb
+     
+        <Link to="file-dashboard" state= {{fileId: fileId} }>
+          <Card className=".bg-dark" color='dark' style={{width: '14rem', margin: '0px' }}>
+          <div className='file-badges'>
+              <div className='file-status-badge'>
+                  <StatusSelectorBadges showBadge = {FileStatus} />
+              </div>
+              <div className='file-comments-badge'>
+                  <CommentCounterBadge commentCount ={FileComments} />
+              </div>
+          </div>
+          <img alt="Sample" src={`/assets/thumbnail/${Thumbnail}.png`}/>
+          <CardBody>
+              <CardTitle > 
+                  {FileName}
               </CardTitle>
-              <CardSubtitle className="mb-2 text-muted" tag="h6">
-                uploaded by Lisandro A.
+              <CardSubtitle className="text-muted">
+                  by Lisandro Ancewicz
               </CardSubtitle>
-            </CardBody>
+          </CardBody>
           </Card> 
         </Link>
-        <div className='badge-selector'>
-        <StatusSelectorBadges showBadge = {"approved"} />
-        </div>
-        <div className='comment-counter'>
-        <CommentCounterBadge commentCount ={"4"} />
+        <div className='file-more-options'>
+        <FileOptionsDropdown fileId = {fileId} />
         </div>
        
-        <div className='file-more-options'>
-        <FileOptionsDropdown />
-        </div>
       </div>
     </>
     )

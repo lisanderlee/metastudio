@@ -2,23 +2,31 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    height: 100vh;
+}
+
+.file-view-bottom-panels{
     height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.file-view-side-panel{
+    display: flex;
+    height: 100%;
+    justify-content: flex-end
 
 }
+
 .file-dashboard-bottom{
     display: flex;
-   
- 
+    width: 100%;
 }
 
-.panel{
-
-     flex-basis:100px;
-}
-
-
-.file{
+.file-view-canvas-panel{
+    display: flex;
+    width: 100%;
+    min-width: 0;
    
-    flex-grow:1;
-    flex-basis:300px;
 }

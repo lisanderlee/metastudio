@@ -6,12 +6,13 @@ import { Suspense } from "react";
 
 
 
-export default function FileThreeCanvasPanel() {
+export default function FileThreeCanvasPanel(FilePath) {
+
   return (
     <div className="container-file-three-loader-panel">
       <Canvas>
         <Suspense fallback={null}>
-          <ThreeMoldeLoader />
+          <ThreeMoldeLoader FilePath={FilePath.FilePath} />
           <OrbitControls />
           <Environment preset="sunset"  />
 
@@ -20,3 +21,6 @@ export default function FileThreeCanvasPanel() {
     </div>
   );
 }
+
+
+
