@@ -5,7 +5,7 @@ import {
 export default function InProgressBadge() {
     return (
     <>
-    <Badge color="info" pill>
+    <Badge className="text-white text-capitalize font-weight-normal"  color="info" pill>
         In Progress
     </Badge>
     </>

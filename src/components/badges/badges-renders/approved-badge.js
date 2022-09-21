@@ -5,7 +5,7 @@ import {
 export default function ApprovedBadge() {
     return (
     <>
-        <Badge color="success" pill>
+        <Badge className="text-white text-capitalize font-weight-normal" color="success" pill>
             Approved
         </Badge>
     </>

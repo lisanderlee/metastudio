@@ -5,7 +5,7 @@ import {
 export default function NeedsReviewBadge() {
     return (
     <>
-    <Badge color="warning" pill>
+    <Badge className="text-white text-capitalize font-weight-normal"  color="warning" pill>
         Needs Review
     </Badge>
     </>

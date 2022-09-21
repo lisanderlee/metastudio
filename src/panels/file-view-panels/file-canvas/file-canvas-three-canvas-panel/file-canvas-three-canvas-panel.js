@@ -12,8 +12,9 @@ export default function FileThreeCanvasPanel(FilePath) {
     <div className="container-file-three-loader-panel">
       <Canvas>
         <Suspense fallback={null}>
+        <ambientLight />
           <ThreeMoldeLoader FilePath={FilePath.FilePath} />
-          <OrbitControls />
+          <OrbitControls autoRotate />
           <Environment preset="sunset"  />
 
         </Suspense>

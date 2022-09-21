@@ -18,7 +18,7 @@ export default function ModelCard({FileName, ProjectID, Thumbnail, FileStatus, F
       <div className='file-card'>
      
         <Link to="file-dashboard" state= {{fileId: fileId} }>
-          <Card className=".bg-dark" color='dark' style={{width: '14rem', margin: '0px' }}>
+          <Card className="bg-dark m-0 p-0" color='dark' style={{width: '14rem', margin: '0px' }}>
           <div className='file-badges'>
               <div className='file-status-badge'>
                   <StatusSelectorBadges showBadge = {FileStatus} />

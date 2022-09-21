@@ -2,7 +2,7 @@ import React from "react";
 import classnames from "classnames";
 import ToggleItem from "../forms/toggle-item";
 import DividerTag from "../tags/divider-tag";
-import './tabs.css'
+
 // reactstrap components
 import {
   Card,

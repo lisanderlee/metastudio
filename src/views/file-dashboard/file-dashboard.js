@@ -13,7 +13,7 @@ const fileselection = filesList.filter(file => {
   return file.id === fileId;
 });
 
-
+console.log(fileselection)
     return (
       <>
       <div className='container-file-dashboard'>

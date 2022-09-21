@@ -5,7 +5,7 @@ import {
 export default function NoStatusBadge() {
     return (
     <>
-    <Badge color="transparent" pill>
+    <Badge className="text-white text-capitalize"   color="transparent" pill>
         No Status
     </Badge>
     </>

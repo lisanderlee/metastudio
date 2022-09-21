@@ -17,7 +17,7 @@ export default function NewDropdown() {
     
     <>
     <UncontrolledDropdown group>
-      <DropdownToggle caret className="btn-sm ml-3" color="secondary">
+      <DropdownToggle caret className="btn-sm ml-3 text-capitalize font-weight-bold" color="secondary">
           New
       </DropdownToggle>
       <DropdownMenu color="primary">

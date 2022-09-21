@@ -18,7 +18,7 @@ export default function ShareDropdown() {
     return (
     <>
     <UncontrolledDropdown group >
-      <DropdownToggle caret className="btn-sm ml-3 " color="primary">
+      <DropdownToggle caret className="btn-sm ml-3 text-white text-capitalize font-weight-bold"  color="primary">
           Share
       </DropdownToggle>
       <DropdownMenu>

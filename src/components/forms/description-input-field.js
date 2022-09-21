@@ -13,8 +13,9 @@ import {
         <Input
           id="exampleFormControlTextarea1"
           placeholder="Write file description here ..."
-          rows="3"
+          rows="2"
           type="textarea"
+         
         />
         <div className="d-flex ">
           <div className="ml-auto">
