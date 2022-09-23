@@ -59,6 +59,16 @@ export const FilesData = [
         path: "/assets/jeans.glb",
         thumbnail: "jeans",
         description: "This is a jeans"
+    },
+    {
+        id: 7,
+        projectID: "1",
+        fileName: 'Mangrove.glb',
+        status: "inprogress",
+        comments: 1,
+        path: "/assets/mangrove.glb",
+        thumbnail: "mangrove",
+        description: "This is a jeans"
     }
   
 ];

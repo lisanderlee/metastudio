@@ -1,9 +1,10 @@
 import './file-canvas-buttons-panel.css';
+import ModelHistoryDropdown from '../../../../components/dropdowns/model-history-dropdown';
+
 import {useState} from "react";
 import FileSnapshotModal from '../../../../components/modals/file-snapshot-modal';
 import FileArModal from '../../../../components/modals/file-ar-modal';
 import FileVrModal from '../../../../components/modals/file-vr-modal';
-
 import {
     FormGroup,
     Form,
@@ -17,7 +18,6 @@ export default function FileCanvasButtonsPanel() {
     const [openFileSnapshotModal, setOpenFileSnapshotModal] = useState(false)
     const [openFileArModal, setOpenFileArModal] = useState(false)
     const [openFileVrModal, setOpenFileVrModal] = useState(false)
-
 
     return (
       <>

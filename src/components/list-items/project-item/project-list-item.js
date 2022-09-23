@@ -1,12 +1,18 @@
 import './project-list-item.css';
 import ProjectMoreOptionsDropdown from "../../dropdowns/project-options-dropdown"
 import Avatar from 'react-avatar';
-
-
+import { Button } from 'reactstrap';
+import { useDispatch } from 'react-redux';
+import {selectedProject} from '../../../features/Selected'
 
 export default function ProjectListItem({ProjectName, ProjectOwner, ProjectId}) {
-    return (
+    const dispatch = useDispatch();
+        return (
       <>
+
+        <Button color='transparent' className='m-0 p-0 text-capitalize' onClick={() => {
+                  dispatch(selectedProject( {ProjectId}));
+                }}>
       <div className='project-item'> 
             <div className='project-info'>
                 <div className='project-image'>
@@ -25,6 +31,7 @@ export default function ProjectListItem({ProjectName, ProjectOwner, ProjectId}) 
                 <ProjectMoreOptionsDropdown ProjectId = {ProjectId} />
             </div>  
       </div>
+      </Button>
       </>
     )
   }

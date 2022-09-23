@@ -11,7 +11,9 @@
     justify-content: space-between; 
 }
 
-
+Button{
+    display: flex;
+}
 .project-item:hover{
     background-color:#262639 ;
     border: none;
@@ -39,6 +41,7 @@
 
 .project-component-text .project-name{
   text-align: left;
+ 
 }
 
 .project-sub-name{
@@ -47,6 +50,10 @@
     font-size: 13px;
     line-height: 20px;   
     color: #4C4C66;
+    display: flex;
+    margin: 0;
+    width: 100%;
+    text-align: left;
 }
 
 

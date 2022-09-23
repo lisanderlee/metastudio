@@ -14,7 +14,7 @@ import {
   UncontrolledDropdown,
 } from "reactstrap";
 
-export default function FileOptionsDropdown() {
+export default function FileOptionsDropdown(fileId) {
 
   const [openFileRenameModal, setOpenFileRenameModal] = useState(false)
   const [openFileMoveToModal, setOpenFileMoveToModal] = useState(false)
@@ -23,6 +23,7 @@ export default function FileOptionsDropdown() {
   const [openShareReviewModal, setOpenShareReviewModal] = useState(false)
   const [openSharePresentationToModal, setOpenSharePresentationModal] = useState(false)
   const [openShareIframeToModal, setOpenShareIframeModal] = useState(false)
+ 
   return (
     <>
     <UncontrolledDropdown direction="end" group>
@@ -69,7 +70,7 @@ export default function FileOptionsDropdown() {
     {openFileRenameModal && <FileRenameModal isModalOpen={setOpenFileRenameModal} />}
     {openFileMoveToModal && <FileMoveToModal isModalOpen={setOpenFileMoveToModal} />}
     {openFileCopyToModal && <FileCopyToModal isModalOpen={setOpenFileCopyToModal} />}
-    {openFileDeleteModal && <FileDeleteModal isModalOpen={setOpenFileDeleteModal} />}
+    {openFileDeleteModal && <FileDeleteModal isModalOpen={setOpenFileDeleteModal} fileId = {fileId.fileId} />}
     </>
     )
   }

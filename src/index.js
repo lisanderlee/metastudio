@@ -9,11 +9,13 @@ import {configureStore} from '@reduxjs/toolkit';
 import {Provider} from 'react-redux';
 import ProjectReducers from './features/Projects'
 import FileReducers from './features/Files'
+import SelectedReducers from './features/Selected'
 
 const store = configureStore({
   reducer: {
     projects: ProjectReducers,
-    files: FileReducers
+    files: FileReducers,
+    selected: SelectedReducers,
   }
 })
 

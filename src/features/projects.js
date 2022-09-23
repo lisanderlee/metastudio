@@ -8,15 +8,25 @@ export const ProjectSlice = createSlice({
   reducers: {
     addProject: (state, action) => {
       state.value.push(action.payload);
-    }
+    },
+ 
+    deleteProject: (state, action) => {
+    const itemId = action.payload
+
+    state.value = state.value.filter((project) => project.id !== itemId);
   },
 
-  deleteUser: (state, action) => {
-    state.value = state.value.filter((user) => user.id !== action.payload.id);
+    updateProject: (state, action) => {
+    const itemId = action.payload.id
+    state.value.map((project) => {
+      if (project.id === itemId) {
+        project.name = action.payload.newProjectName;
+      }
+    });
   },
-
+},
 
 });
 
-export const {addProject, deleteUser} = ProjectSlice.actions;
+export const {addProject, deleteProject,updateProject} = ProjectSlice.actions;
 export default ProjectSlice.reducer;

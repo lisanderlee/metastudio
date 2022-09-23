@@ -6,6 +6,9 @@ import {useSelector} from 'react-redux'
 
 export default function MainCanvasPanel() {
   const filesList = useSelector ((state) => state.files.value)
+  const selectedFile = useSelector((state)=> state.selected)
+
+  console.log(selectedFile.value)
 
     return (
       <>
@@ -14,14 +17,12 @@ export default function MainCanvasPanel() {
         <SortDropdown />
         </div>
         <div className='main-canvas-body'>  
-        {filesList.map((file)=>{
-          return <ModelCard FileName={file.fileName} ProjectID={file.projectID} Thumbnail={file.thumbnail} FileStatus={file.status} FileComments={file.comments} fileId={file.id}/>
-        })}
+       {       
+       filesList.map(  (file) => { if ( file.projectID == selectedFile.value) {
+        return <ModelCard FileName={file.fileName} ProjectID={file.projectID} Thumbnail={file.thumbnail} FileStatus={file.status} FileComments={file.comments} fileId={file.id}/>
+      }})
+      }
         </div> 
-        
       </div>
       </>
-    )
-  }
-
- 
+    )}

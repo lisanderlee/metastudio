@@ -1,3 +1,5 @@
+import { useDispatch } from "react-redux";
+import { deleteFile } from "../../features/Files";
 // reactstrap components
 import {
   Button,
@@ -5,7 +7,10 @@ import {
  
 } from "reactstrap";
 
-export default function FileDeleteModal({isModalOpen}) {
+export default function FileDeleteModal({isModalOpen, fileId}) {
+
+  const dispatch = useDispatch();
+
     return (
       <>
           <Modal
@@ -15,7 +20,7 @@ export default function FileDeleteModal({isModalOpen}) {
           >
             <div className="modal-header">
               <h5 className="modal-title" id="exampleModalLabel">
-               Delete File
+               Delete File {fileId}
               </h5>
               <button
                 aria-label="Close"
@@ -40,7 +45,9 @@ export default function FileDeleteModal({isModalOpen}) {
               >
                 Cancel
               </Button>
-              <Button color="warning" type="button">
+              <Button color="warning" type="button" onClick={()=>{
+                dispatch(deleteFile(fileId));
+              }}>
                 Delete
               </Button>
             </div>

@@ -1,4 +1,5 @@
 import {useState} from "react";
+import './dropdowns.css'
 import ProjectEditModal from "../modals/project-edit-settings-modal";
 import ProjectDownloadModal from "../modals/project-download-modal";
 import ProjectRecentlyDeletedModal from "../modals/project-recently-deleted-modal";
@@ -24,7 +25,7 @@ export default function ProjectOptionsDropdown({ProjectId}) {
  
   return (
       <>
-      <UncontrolledDropdown direction="end"    className="me-2" group>
+      <UncontrolledDropdown direction="end"    className="me-2 project-dropdown" group>
         <DropdownToggle  className="btn-sm" color="dark">
           <i class="fa fa-ellipsis-v fa-2x" aria-hidden="true"></i>
         </DropdownToggle>

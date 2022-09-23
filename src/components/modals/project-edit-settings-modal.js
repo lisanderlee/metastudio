@@ -1,6 +1,9 @@
 import React from "react";
 import ToggleItem from "../forms/toggle-item";
 import DividerTag from "../tags/divider-tag";
+import { useDispatch } from "react-redux";
+import { updateProject } from "../../features/Projects";
+import { useState } from "react";
 // reactstrap components
 import {
   Button,
@@ -10,6 +13,10 @@ import {
 } from "reactstrap";
 
 export default function ProjectEditModal({isModalOpen, ProjectId}) {
+  const dispatch = useDispatch();
+
+  const [newProjectName, setNewProjectName] = useState("");
+
     return (
       <>
           <Modal
@@ -19,7 +26,7 @@ export default function ProjectEditModal({isModalOpen, ProjectId}) {
           >
             <div className="modal-header">
               <h5 className="modal-title" id="exampleModalLabel">
-               Edit Project
+               {newProjectName}Edit Project
               </h5>
               <button
                 aria-label="Close"
@@ -32,7 +39,8 @@ export default function ProjectEditModal({isModalOpen, ProjectId}) {
               </button>
             </div>
             <div className="modal-body">
-            <Input id="projectName" placeholder="Project Name" type="email" className="mb-4"/> 
+            <Input id="projectName" placeholder="Project Name" type="email" className="mb-4"   
+            onChange={(event) => {setNewProjectName(event.target.value)}}/> 
             <ToggleItem text="Anyone on your team can view project" />
             <DividerTag text="Permissions" />
             <ToggleItem text="Anyone can download" />
@@ -52,7 +60,9 @@ export default function ProjectEditModal({isModalOpen, ProjectId}) {
               >
                 Delete Project
               </Button>
-              <Button color="primary" type="button">
+              <Button onClick={() => {
+                  dispatch(updateProject( {id:ProjectId, newProjectName:newProjectName}));
+                }} color="primary" type="button">
                 Save Settings
               </Button>
             </div>

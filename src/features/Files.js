@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { FilesData } from '../data/files-data';
+import { FilesData } from "../data/files-data";
 
 
 export const FileSlice = createSlice({
@@ -8,15 +8,25 @@ export const FileSlice = createSlice({
   reducers: {
     addFile: (state, action) => {
       state.value.push(action.payload);
-    }
+    },
+ 
+    deleteFile: (state, action) => {
+    const itemId = action.payload
+      console.log(itemId)
+    state.value = state.value.filter((project) => project.id !== itemId);
   },
 
-  deleteFile: (state, action) => {
-    state.value = state.value.filter((user) => user.id !== action.payload.id);
+    updateFile: (state, action) => {
+    const itemId = action.payload.id
+    state.value.map((project) => {
+      if (project.id === itemId) {
+        project.name = action.payload.newProjectName;
+      }
+    });
   },
-
+},
 
 });
 
-export const {addFile, deleteFile} = FileSlice.actions;
+export const {addFile, deleteFile,updateFile} = FileSlice.actions;
 export default FileSlice.reducer;

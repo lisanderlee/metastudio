@@ -17,17 +17,17 @@ console.log(fileselection)
     return (
       <>
       <div className='container-file-dashboard'>
-          <div className='file-view-top-bar'>
-            <FileTopBarPanel FileName ={fileselection[0].fileName} />
+        <div className='file-view-top-bar'>
+        <FileTopBarPanel FileName ={fileselection[0].fileName} />
+        </div>
+        <div className='file-view-bottom-panels'>
+          <div className='file-view-canvas-panel'>
+          <FileMasterCanvasPanel filePath = {fileselection[0].path} />
           </div>
-          <div className='file-view-bottom-panels'>
-            <div className='file-view-canvas-panel'>
-            <FileMasterCanvasPanel filePath = {fileselection[0].path} />
-            </div>
-            <div className="file-view-side-panel">
-            <FileSideMasterPanel /> 
-            </div>
-          </div>  
+          <div className="file-view-side-panel">
+          <FileSideMasterPanel /> 
+          </div>
+        </div>  
       </div>
       </>
     )
